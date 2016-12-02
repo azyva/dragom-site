@@ -11,28 +11,45 @@ toc: false
 # folder: intro
 ---
 
-Dragom is an enterprise tool development framework for managing multi-module
-reference graphs.
+Dragom is a plugin-based and extensible enterprise tool development framework
+for managing multi-module reference graphs.
 
 It makes working with such reference graphs as easy as working with single
 modules.
 
-Dragom also includes tools developed with this framework which operate on
-multiple modules of a multi-module reference graph at once:
+Dragom also includes tools which operate on multiple modules of a multi-module
+reference graph at once:
 
 - Checkout
 - Build
+- Create branches (development, release, etc.)
 - Release
 - Merge in main branch (reintegration merge)
 - Merge arbitrary reference graphs
-- Create a branch (development, release, etc.)
 - Report
 - Interact with build automation tools such as Jenkins
 
-Dragom is developed in Java and mostly targets Java development which uses an
-artifact-based development process and build tool such as Maven.
+Dragom is developed in Java and mostly targets Java artifact-based development
+processes and build tool such as Maven.
 
-Dragom is FOSS (free and open-source software) licensed under the AGPL.
+Being plugin-based and extensible, Dragom aims to integrate seamlessly with
+other custom tools. But its stand-alone tools can also be used as is, or be
+integrated through plugins with other existing tools.
+
+Dragom currently integrates through plugins with the following external tools:
+
+- Git
+- Maven
+- Jenkins
+
+It also supports various strategies for creating branches and releasing
+modules, including strategies compatible with continuous integration,
+continuous delivery, semantic versioning, uniform date-based versioning and
+others, all in the context of multi-module reference graphs.
+
+Other plugins can and will be developed to support other tools and strategies.
+
+Dragom is FOSS (free and open-source software) licensed under AGPL v3.
 
 ## Ask yourself these questions...
 

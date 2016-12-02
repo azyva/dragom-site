@@ -14,6 +14,18 @@ entries:
       output: web
       type: homepage
 
+#    - title: Dragom in action
+#      url: /illustration.html
+#      output: web
+
+#    - title: What Dragom is not
+#      url: /what-dragom-is-not.html
+#      output: web
+
 #    - title: History
 #      url: /history.html
 #      output: web
+
+    - title: Who is behind Dragom?
+      url: /creator.html
+      output: web
