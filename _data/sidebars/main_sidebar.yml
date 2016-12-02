@@ -13,3 +13,7 @@ entries:
       url: /what-is-dragom.html
       output: web
       type: homepage
+
+#    - title: History
+#      url: /history.html
+#      output: web
