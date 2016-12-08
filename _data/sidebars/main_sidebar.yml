@@ -5,7 +5,7 @@ entries:
   levels: one
   folders:
 
-  - title: Introduction
+  - title: Overview
     output: web
     folderitems:
 
@@ -13,19 +13,91 @@ entries:
       url: /what-is-dragom.html
       output: web
       type: homepage
+      
+    - title: Why Dragom?
+      url: /why-dragom.html
+      output: web
 
-#    - title: Dragom in action
-#      url: /illustration.html
-#      output: web
+    - title: Dragom in action
+      url: /illustration.html
+      output: web
 
-#    - title: What Dragom is not
-#      url: /what-dragom-is-not.html
-#      output: web
+    - title: What Dragom is not
+      url: /what-dragom-is-not.html
+      output: web
 
-#    - title: History
-#      url: /history.html
-#      output: web
+    - title: History
+      url: /history.html
+      output: web
 
     - title: Who is behind Dragom?
       url: /creator.html
+      output: web
+
+  - title: Distribution
+    output: web
+    folderitems:
+
+    - title: Dragom modules
+      url: /modules.html
+      output: web
+      
+    - title: Git repositories
+      url: /git-repos.html
+      output: web
+      
+    - title: Dependencies
+      url: /dependencies.html
+      output: web
+      
+    - title: Semantic versioning
+      url: /semantic-versioning.html
+      output: web
+      
+    - title: GPG signing
+      url: /gpg-signing.html
+      output: web
+      
+    - title: Download current
+      url: /download-current.html
+      output: web
+
+    - title: Download stable
+      url: /download-stable.html
+      output: web
+
+    - title: dragom-api releases
+      url: /releases-dragom-api.html
+      output: web
+
+    - title: dragom-core releases
+      url: /releases-dragom-core.html
+      output: web
+
+    - title: dragom-cli-tools releases
+      url: /releases-dragom-cli-tools.html
+      output: web
+
+  - title: Resources
+    output: web
+    folderitems:
+    
+    - title: Getting started
+      url: /getting-started.html
+      output: web
+      
+    - title: Documentation
+      url: /doc-index.html
+      output: web
+
+    - title: JavaDoc current
+      url: /javadoc-current.html
+      output: web
+      
+    - title: JavaDoc stable
+      url: /javadoc-stable.html
+      output: web
+      
+    - title: Support
+      url: /support.html
       output: web

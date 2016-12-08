@@ -2,7 +2,7 @@
 title: What is Dragom?
 keywords: dragom
 last_updated: 2016-12-01
-tags: [intro]
+# tags: [intro]
 summary: "Dragom makes continuous integration, delivery and release engineering fast and efficient for complex multi-module enterprise systems."
 sidebar: main_sidebar
 permalink: what-is-dragom.html
@@ -10,6 +10,8 @@ redirect_from: /index.html
 toc: false
 # folder: intro
 ---
+
+{% include warning.html content="This site is under construction. Please come back regularly!" %}
 
 Dragom is a plugin-based and extensible enterprise tool development framework
 for managing multi-module reference graphs.

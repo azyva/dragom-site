@@ -1,2 +1,5 @@
 allowed-tags:
   - intro
+  - dist
+  - resources
+  - doc

@@ -3,6 +3,18 @@
 topnav:
 - title: Topnav
   items:
+    - title: Overview
+      url: /what-is-dragom.html
+    - title: Getting started
+      url: /getting-started.html
+    - title: Downloads
+      url: /download-current.html
+    - title: Documentation
+      url: /doc-index.html
+    - title: Javadoc
+      url: /javadoc-current.html
+    - title: Support
+      url: /support.html
     - title: News
       url: /news.html
 
@@ -30,3 +42,6 @@ topnav:
 #           url: /p1_landing_page.html
 #         - title: Product 2
 #           url: /p2_landing_page.html
+
+
+
