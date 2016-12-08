@@ -113,5 +113,3 @@ url: http://dragom.org
 
 gems:
   - jekyll-redirect-from
-
-keep_files: [javadoc]

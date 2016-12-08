@@ -1,6 +1,5 @@
 /.project
-_site/*
-!_site/javadoc
+_site/
 .sass-cache/
 .jekyll-metadata
 _pdf
