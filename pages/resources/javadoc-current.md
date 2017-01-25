@@ -12,6 +12,6 @@ toc: false
 
 Module                      |Version
 ----------------------------|-------
-dragom&#8209;api            |0.1.1  |<a class="fa fa-external-link" href="/javadoc/dragom-api-current/index.html" target="_blank"/>
-dragom&#8209;core           |0.1.1  |<a class="fa fa-external-link" href="/javadoc/dragom-core-current/index.html" target="_blank"/>
-dragom&#8209;cli&#8209;tools|0.1.1  |<a class="fa fa-external-link" href="/javadoc/dragom-cli-tools-current/index.html" target="_blank"/>
+dragom&#8209;api            |0.1.2  |<a class="fa fa-external-link" href="/javadoc/dragom-api-current/index.html" target="_blank"/>
+dragom&#8209;core           |0.1.2  |<a class="fa fa-external-link" href="/javadoc/dragom-core-current/index.html" target="_blank"/>
+dragom&#8209;cli&#8209;tools|0.1.2  |<a class="fa fa-external-link" href="/javadoc/dragom-cli-tools-current/index.html" target="_blank"/>
