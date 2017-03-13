@@ -157,7 +157,7 @@ entries:
       url: /doc-config-config-runtime-properties.html
       output: web
 
-    - title: "Do you want to continue?" contexts
+    - title: '"Do you want to continue?" context'
       url: /doc-config-config-do-you-want-to-continue-contexts.html
       output: web
 
