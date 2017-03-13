@@ -1,8 +1,14 @@
 {% if page.sidebar == "main_sidebar" %}
 {% assign sidebar = site.data.sidebars.main_sidebar.entries %}
 
-{% elsif page.sidebar == "doc_sidebar" %}
-{% assign sidebar = site.data.sidebars.doc_sidebar.entries %}
+{% elsif page.sidebar == "doc_config_sidebar" %}
+{% assign sidebar = site.data.sidebars.doc_config_sidebar.entries %}
+
+{% elsif page.sidebar == "doc_user_sidebar" %}
+{% assign sidebar = site.data.sidebars.doc_userconfig_sidebar.entries %}
+
+{% elsif page.sidebar == "doc_dev_sidebar" %}
+{% assign sidebar = site.data.sidebars.doc_dev_sidebar.entries %}
 
 {% else %}
 {% assign sidebar = site.data.sidebars.main_sidebar.entries %}

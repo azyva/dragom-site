@@ -1,7 +1,7 @@
 ---
 title: What is Dragom?
 keywords: dragom
-last_updated: 2016-12-01
+last_updated: 2017-03-12
 # tags: [intro]
 summary: "Dragom makes continuous integration, delivery and release engineering fast and efficient for complex multi-module enterprise systems."
 sidebar: main_sidebar
@@ -13,8 +13,9 @@ toc: false
 
 {% include warning.html content="This site is under construction. Please come back regularly!" %}
 
-Dragom is a plugin-based and extensible enterprise tool development framework
-for managing multi-module reference graphs.
+Dragom is a plugin-based, extensible and highly configurable tool development
+framework and tool set for managing multi-module reference graphs encountered
+in artifact-based development.
 
 It makes working with such reference graphs as easy as working with single
 modules.
@@ -67,5 +68,5 @@ Dragom is FOSS (free and open-source software) licensed under AGPL v3.
   efforts?
 
 Sorry for the cliché, but if you answered yes to any of these, please read on.
-Dragom may be the missing link your were looking for in your artifact-based
+Dragom may be the missing link you were looking for in your artifact-based
 development process!

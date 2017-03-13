@@ -15,8 +15,22 @@ topnav:
       url: /javadoc-current.html
     - title: Support
       url: /support.html
+    - title: Contact
+      url: /contact.html
     - title: News
       url: /news.html
+
+#topnav_dropdowns:
+#- title: Topnav dropdowns
+#  folders:
+#    - title: Documentation
+#      folderitems:
+#        - title: Configurator 
+#          url: /doc-config-index.html
+#        - title: End user
+#          url: /doc-user-index.html
+#        - title: Developer
+#          url: doc-dev-index.html
 
 #Topnav dropdowns
 # topnav_dropdowns:

@@ -101,3 +101,7 @@ entries:
     - title: Support
       url: /support.html
       output: web
+
+    - title: Contact
+      url: /contact.html
+      output: web
