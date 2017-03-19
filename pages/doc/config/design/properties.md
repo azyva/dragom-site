@@ -191,7 +191,7 @@ dragom-set-env.cmd.
 See [tool bootstrap process][doc-config-design-tool-bootstrap-process] for more
 information.
 
-Model properties are documented [here][doc-config-config-init-properties].
+Initialization properties are documented [here][doc-config-config-init-properties].
 
 ### Java system properties
 
@@ -201,7 +201,7 @@ behavior, such as proxies, logging, etc.
 
 Although the other types of properties mentionned above are preferred, Dragom
 uses some Java system properties which affect the
-[tool bootstrap process][doc-config-design-tool-bootstrap-process], which
+[tool bootstrap process][doc-config-design-tool-bootstrap-process] and which
 executes before the other types of properties are considered.
 
 Dragom loads the classpath resource `/META-INF/dragom.properties` and makes

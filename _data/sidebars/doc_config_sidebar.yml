@@ -161,6 +161,10 @@ entries:
       url: /doc-config-config-exec-context-properties.html
       output: web
 
+    - title: Tool properties (to do)
+      url: /doc-config-config-tool-properties.html
+      output: web
+
     - title: Initialization properties (to do)
       url: /doc-config-config-init-properties.html
       output: web
