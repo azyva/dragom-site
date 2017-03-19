@@ -1,6 +1,6 @@
 ---
 title: Contact
-keywords: contact 
+# keywords: 
 last_updated: 2017-03-12
 # tags: [resources]
 # summary: ""

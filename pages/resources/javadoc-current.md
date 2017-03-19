@@ -1,6 +1,6 @@
 ---
 title: Javadoc current
-keywords: javadoc, current
+# keywords:
 last_updated: 2016-12-05
 # tags: [resources]
 # summary: ""

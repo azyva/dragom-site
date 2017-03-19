@@ -1,6 +1,6 @@
 ---
 title: dragom-api releases
-keywords: releases, dragom-api
+# keywords:
 last_updated: 2016-12-05
 # tags: [dist]
 # summary: ""

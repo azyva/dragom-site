@@ -1,6 +1,6 @@
 ---
 title: What Dragom is not
-keywords: dragom
+# keywords:
 last_updated: 2016-12-01
 # tags: [intro]
 # summary: ""

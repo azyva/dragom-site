@@ -1,6 +1,6 @@
 ---
 title: Dragom in action
-keywords: dragom, demo, teaser, illustration
+# keywords:
 last_updated: 2016-12-01
 # tags: [intro]
 # summary: ""

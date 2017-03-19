@@ -1,6 +1,6 @@
 ---
 title: What is Dragom?
-keywords: dragom
+# keywords:
 last_updated: 2017-03-12
 # tags: [intro]
 summary: "Dragom makes continuous integration, delivery and release engineering fast and efficient for complex multi-module enterprise systems."

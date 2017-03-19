@@ -1,6 +1,6 @@
 ---
 title: Getting started
-keywords: tutorial, getting started
+# keywords:
 last_updated: 2016-12-05
 # tags: [resources]
 # summary: ""

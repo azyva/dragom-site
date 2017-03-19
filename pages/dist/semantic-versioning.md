@@ -1,6 +1,6 @@
 ---
 title: Semantic versioning
-keywords: versions, versioning, semantic
+# keywords:
 last_updated: 2016-12-05
 # tags: [dist]
 # summary: ""

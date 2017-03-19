@@ -1,6 +1,6 @@
 ---
 title: History
-keywords: dragom, history 
+# keywords: 
 last_updated: 2016-12-01
 # tags: [intro]
 summary: "Dragom fills the void introduced in the market by artifact-based development tools."

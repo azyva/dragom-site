@@ -1,6 +1,6 @@
 ---
 title: dragom-core releases
-keywords: releases, dragom-core
+# keywords:
 last_updated: 2016-12-05
 # tags: [dist]
 # summary: ""

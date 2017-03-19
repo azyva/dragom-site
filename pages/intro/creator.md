@@ -1,6 +1,6 @@
 ---
 title: Who is behind Dragom?
-keywords: dragom, creator, founder, azyva
+# keywords:
 last_updated: 2017-03-12
 # tags: [intro]
 # summary: ""

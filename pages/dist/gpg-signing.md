@@ -1,6 +1,6 @@
 ---
 title: GPG signing
-keywords: gpg, sign, signing
+# keywords:
 last_updated: 2016-12-05
 # tags: [dist]
 # summary: ""

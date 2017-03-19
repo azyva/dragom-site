@@ -17,103 +17,107 @@ entries:
     output: web
     folderitems:
 
-    - title: Model
+    - title: Model (to do)
       url: /doc-config-design-model.html
       output: web
 
-    - title: Node paths
+    - title: Node paths (to do)
       url: /doc-config-design-node-paths.html
       output: web
 
-    - title: Reference paths and matchers
-      url: /doc-config-design-reference-paths-matchers.html
+    - title: Reference paths and matchers (to do)
+      url: /doc-config-design-reference-path-matchers.html
       output: web
 
-    - title: Versions and artifact versions
+    - title: Versions and artifact versions (to do)
       url: /doc-config-design-versions-artifact-versions.html
       output: web
 
-    - title: Module versions
-      url: /doc-config-module-versions.html
+    - title: Module versions (to do)
+      url: /doc-config-design-module-versions.html
       output: web
 
-    - title: Execution context
-      url: /doc-config-exec-context.html
+    - title: Root module versions (to do)
+      url: /doc-config-design-root-module-versions.html
       output: web
 
-    - title: Jobs
-      url: /doc-config-jobs.html
+    - title: Execution context (to do)
+      url: /doc-config-design-exec-context.html
       output: web
 
-    - title: Tools
-      url: /doc-config-tools.html
+    - title: Jobs (to do)
+      url: /doc-config-design-jobs.html
+      output: web
+
+    - title: Tools (to do)
+      url: /doc-config-design-tools.html
       output: web
 
     - title: Properties
-      url: /doc-config-properties.html
+      url: /doc-config-design-properties.html
       output: web
 
   - title: Model plugins
     output: web
     folderitems:
 
-    - title: ArtifactInfoPlugin
+    - title: ArtifactInfoPlugin (to do)
       url: /doc-config-model-plugins-ArtifactInfoPlugin.html
       output: web
 
-    - title: ArtifactVersionManagerPlugin
+    - title: ArtifactVersionManagerPlugin (to do)
       url: /doc-config-model-plugins-ArtifactVersionManagerPlugin.html
       output: web
 
-    - title: ArtifactVersionMapperPlugin
+    - title: ArtifactVersionMapperPlugin (to do)
       url: /doc-config-model-plugins-ArtifactVersionMapperPlugin.html
       output: web
 
-    - title: BuilderPlugin
+    - title: BuilderPlugin (to do)
       url: /doc-config-model-plugins-BuilderPlugin.html
       output: web
 
-    - title: FindModuleByArtifactGroupIdPlugin
+    - title: FindModuleByArtifactGroupIdPlugin (to do)
       url: /doc-config-model-plugins-FindModuleByArtifactGroupIdPlugin.html
       output: web
 
-    - title: JenkinsJobInfoPlugin 
+    - title: JenkinsJobInfoPlugin (to do) 
       url: /doc-config-model-plugins-JenkinsJobInfoPlugin.html
       output: web
 
-    - title: ModuleVersionMatcherPlugin
+    - title: ModuleVersionMatcherPlugin (to do)
       url: /doc-config-model-plugins-ModuleVersionMatcherPlugin.html
       output: web
 
-    - title: NodeInitPlugin
-      url: /doc-config-model-plugins-NodeInitPluginPlugin.html
+    - title: NodeInitPlugin (to do)
+      url: /doc-config-model-plugins-NodeInitPlugin.html
       output: web
 
-    - title: ReferenceManagerPlugin
+    - title: ReferenceManagerPlugin (to do)
       url: /doc-config-model-plugins-ReferenceManagerPlugin.html
       output: web
 
-    - title: RemoteBuilderPlugin
+    - title: RemoteBuilderPlugin (to do)
       url: /doc-config-model-plugins-RemoteBuilderPlugin.html
       output: web
 
-    - title: ScmPlugin
+    - title: ScmPlugin (to do)
       url: /doc-config-model-plugins-ScmPlugin.html
       output: web
 
-    - title: SelectDynamicVersionPlugin
+    - title: SelectDynamicVersionPlugin (to do)
       url: /doc-config-model-plugins-SelectDynamicVersionPlugin.html
       output: web
 
-    - title: SelectStaticVersionPlugin
+    - title: SelectStaticVersionPlugin (to do)
       url: /doc-config-model-plugins-SelectStaticVersionPlugin.html
       output: web
 
-    - title: UndefinedDescendantNodeManagerPlugin
+    - title: UndefinedDescendantNodeManagerPlugin (to do)
       url: /doc-config-model-plugins-UndefinedDescendantNodeManagerPlugin.html
       output: web
 
-    - title: VersionClassifierPlugin
+    - title: VersionClassifierPlugin (to do)
       url: /doc-config-model-plugins-VersionClassifierPlugin.html
       output: web
 
@@ -121,23 +125,23 @@ entries:
     output: web
     folderitems:
 
-    - title: CredentialStorePlugin
+    - title: CredentialStorePlugin (to do)
       url: /doc-config-exec-context-plugins-CredentialStorePlugin.html
       output: web
 
-    - title: EventPlugin
+    - title: EventPlugin (to do)
       url: /doc-config-exec-context-plugins-EventPlugin.html
       output: web
 
-    - title: RuntimePropertiesPlugin
+    - title: RuntimePropertiesPlugin (to do)
       url: /doc-config-exec-context-plugins-RuntimePropertiesPlugin.html
       output: web
 
-    - title: UserInteractionCallbackPluginPlugin
-      url: /doc-config-exec-context-plugins-UserInteractionCallbackPluginPlugin.html
+    - title: UserInteractionCallbackPlugin (to do)
+      url: /doc-config-exec-context-plugins-UserInteractionCallbackPlugin.html
       output: web
 
-    - title: WorkspacePlugin
+    - title: WorkspacePlugin (to do)
       url: /doc-config-exec-context-plugins-WorkspacePlugin.html
       output: web
 
@@ -145,75 +149,79 @@ entries:
     output: web
     folderitems:
 
-    - title: Model properties
+    - title: Model properties (to do)
       url: /doc-config-config-model-properties.html
       output: web
 
-    - title: Initialization properties
+    - title: Execution context properties (to do)
+      url: /doc-config-config-exec-context-properties.html
+      output: web
+
+    - title: Initialization properties (to do)
       url: /doc-config-config-init-properties.html
       output: web
 
-    - title: Runtime properties
+    - title: Runtime properties (to do)
       url: /doc-config-config-runtime-properties.html
       output: web
 
-    - title: '"Do you want to continue?" context'
+    - title: '"Do you want to continue?" contexts (to do)'
       url: /doc-config-config-do-you-want-to-continue-contexts.html
       output: web
 
-    - title: Exceptional conditions
-      url: /doc-config-config-exceptional-condititions.html
+    - title: Exceptional conditions (to do)
+      url: /doc-config-config-exceptional-conditions.html
       output: web
 
   - title: Jobs
     output: web
     folderitems:
 
-    - title: Build
+    - title: Build (to do)
       url: /doc-config-jobs-Build.html
       output: web
 
-    - title: BuildReferenceGraph
+    - title: BuildReferenceGraph (to do)
       url: /doc-config-jobs-BuildReferenceGraph.html
       output: web
 
-    - title: BuildRemote
+    - title: BuildRemote (to do)
       url: /doc-config-jobs-BuildRemote.html
       output: web
 
-    - title: ChangeReferenceToModuleVersion
-      url: /doc-config-jobs-CHangeReferenceToModuleVersion.html
+    - title: ChangeReferenceToModuleVersion (to do)
+      url: /doc-config-jobs-ChangeReferenceToModuleVersion.html
       output: web
 
-    - title: Checkout
+    - title: Checkout (to do)
       url: /doc-config-jobs-Checkout.html
       output: web
 
-    - title: MergeMain
+    - title: MergeMain (to do)
       url: /doc-config-jobs-MergeMain.html
       output: web
 
-    - title: MergeReferenceGraph
+    - title: MergeReferenceGraph (to do)
       url: /doc-config-jobs-MergeReferenceGraph.html
       output: web
 
-    - title: ReferenceGraphReport
+    - title: ReferenceGraphReport (to do)
       url: /doc-config-jobs-ReferenceGraphReport.html
       output: web
 
-    - title: Release
+    - title: Release (to do)
       url: /doc-config-jobs-Release.html
       output: web
 
-    - title: RootManager
+    - title: RootManager (to do)
       url: /doc-config-jobs-RootManager.html
       output: web
 
-    - title: SetupJenkinsJob
-      url: /doc-config-jobs-SetupJenkinsJob.html
+    - title: SetupJenkinsJob (to do)
+      url: /doc-config-jobs-SetupJenkinsJobs.html
       output: web
 
-    - title: SwitchToDynamicVersion
+    - title: SwitchToDynamicVersion (to do)
       url: /doc-config-jobs-SwitchToDynamicVersion.html
       output: web
 
@@ -221,35 +229,35 @@ entries:
     output: web
     folderitems:
 
-    - title: DragomToolInvoker
+    - title: DragomToolInvoker (to do)
       url: /doc-config-tools-DragomToolInvoker.html
       output: web
 
-    - title: CredentialManagerTool
+    - title: CredentialManagerTool (to do)
       url: /doc-config-tools-CredentialManagerTool.html
       output: web
 
-    - title: ExecContextManagerTool
+    - title: ExecContextManagerTool (to do)
       url: /doc-config-tools-ExecContextManagerTool.html
       output: web
 
-    - title: GenericRootModuleVersionJobInvokerTool
+    - title: GenericRootModuleVersionJobInvokerTool (to do)
       url: /doc-config-tools-GenericRootModuleVersionJobInvokerTool.html
       output: web
 
-    - title: ReferenceGraphReportTool
+    - title: ReferenceGraphReportTool (to do)
       url: /doc-config-tools-ReferenceGraphReportTool.html
       output: web
 
-    - title: RootManagerTool
+    - title: RootManagerTool (to do)
       url: /doc-config-tools-RootManagerTool.html
       output: web
 
-    - title: SetupJenkinsJobsTool
+    - title: SetupJenkinsJobsTool (to do)
       url: /doc-config-tools-SetupJenkinsJobsTool.html
       output: web
 
-    - title: WorkspaceManagerTool
+    - title: WorkspaceManagerTool (to do)
       url: /doc-config-tools-WorkspaceManagerTool.html
       output: web
 
@@ -257,83 +265,83 @@ entries:
     output: web
     folderitems:
 
-    - title: ConfigArtifactVersionMapperPluginImpl
+    - title: ConfigArtifactVersionMapperPluginImpl (to do)
       url: /doc-config-model-plugin-impls-ConfigArtifactVersionMapperPluginImpl.html
       output: web
 
-    - title: ContinuousReleaseSelectStaticVersionPluginImpl 
+    - title: ContinuousReleaseSelectStaticVersionPluginImpl  (to do)
       url: /doc-config-model-plugin-impls-ContinuousReleaseSelectStaticVersionPluginImpl.html
       output: web
 
-    - title: GitScmPluginImpl
+    - title: GitScmPluginImpl (to do)
       url: /doc-config-model-plugin-impls-GitScmPluginImpl.html
       output: web
 
-    - title: HotfixSelectDynamicVersionPluginImpl
+    - title: HotfixSelectDynamicVersionPluginImpl (to do)
       url: /doc-config-model-plugin-impls-HotfixSelectDynamicVersionPluginImpl.html
       output: web
 
-    - title: JenkinsRemoteBuilderPluginImpl
+    - title: JenkinsRemoteBuilderPluginImpl (to do)
       url: /doc-config-model-plugin-impls-JenkinsRemoteBuilderPluginImpl.html
       output: web
 
-    - title: MatchAllModuleVersionMatcherPluginImpl
+    - title: MatchAllModuleVersionMatcherPluginImpl (to do)
       url: /doc-config-model-plugin-impls-MatchAllModuleVersionMatcherPluginImpl.html
       output: web
 
-    - title: MavenArtifactVersionManagerPluginImpl
+    - title: MavenArtifactVersionManagerPluginImpl (to do)
       url: /doc-config-model-plugin-impls-MavenArtifactVersionManagerPluginImpl.html
       output: web
 
-    - title: MavenBuilderPluginImpl
+    - title: MavenBuilderPluginImpl (to do)
       url: /doc-config-model-plugin-impls-MavenBuilderPluginImpl.html
       output: web
 
-    - title: MavenReferenceManagerPluginImpl
+    - title: MavenReferenceManagerPluginImpl (to do)
       url: /doc-config-model-plugin-impls-MavenReferenceManagerPluginImpl.html
       output: web
 
-    - title: PhaseSelectDynamicVersionPluginImpl
+    - title: PhaseSelectDynamicVersionPluginImpl (to do)
       url: /doc-config-model-plugin-impls-PhaseSelectDynamicVersionPluginImpl.html
       output: web
 
-    - title: PhaseSelectStaticVersionPluginImpl
+    - title: PhaseSelectStaticVersionPluginImpl (to do)
       url: /doc-config-model-plugin-impls-PhaseSelectStaticVersionPluginImpl.html
       output: web
 
-    - title: RuntimeSelectionPluginFactory
+    - title: RuntimeSelectionPluginFactory (to do)
       url: /doc-config-model-plugin-impls-RuntimeSelectionPluginFactory.html
       output: web
 
-    - title: SemanticSelectStaticVersionPluginImpl
+    - title: SemanticSelectStaticVersionPluginImpl (to do)
       url: /doc-config-model-plugin-impls-SemanticSelectStaticVersionPluginImpl.html
       output: web
 
-    - title: SimpleArtifactInfoPluginImpl
+    - title: SimpleArtifactInfoPluginImpl (to do)
       url: /doc-config-model-plugin-impls-SimpleArtifactInfoPluginImpl.html
       output: web
 
-    - title: SimpleArtifactVersionMapperPluginImpl
+    - title: SimpleArtifactVersionMapperPluginImpl (to do)
       url: /doc-config-model-plugin-impls-SimpleArtifactVersionMapperPluginImpl.html
       output: web
 
-    - title: SimpleFindModuleByArtifactGroupIdPluginImpl
+    - title: SimpleFindModuleByArtifactGroupIdPluginImpl (to do)
       url: /doc-config-model-plugin-impls-SimpleFindModuleByArtifactGroupIdPluginImpl.html
       output: web
 
-    - title: SimpleVersionClassifierPluginImpl
+    - title: SimpleVersionClassifierPluginImpl (to do)
       url: /doc-config-model-plugin-impls-SimpleVersionClassifierPluginImpl.html
       output: web
 
-    - title: SimpleDynamicUndefinedDescendantNodeManagerModulePluginImpl
+    - title: SimpleDynamicUndefinedDescendantNodeManagerModulePluginImpl (to do)
       url: /doc-config-model-plugin-impls-SimpleDynamicUndefinedDescendantNodeManagerModulePluginImpl.html
       output: web
 
-    - title: UniformSelectDynamicVersionPluginImpl
+    - title: UniformSelectDynamicVersionPluginImpl (to do)
       url: /doc-config-model-plugin-impls-UniformSelectDynamicVersionPluginImpl.html
       output: web
 
-    - title: UniformSelectStaticVersionPluginImpl
+    - title: UniformSelectStaticVersionPluginImpl (to do)
       url: /doc-config-model-plugin-impls-UniformSelectStaticVersionPluginImpl.html
       output: web
 
@@ -341,26 +349,26 @@ entries:
     output: web
     folderitems:
 
-    - title: DefaultCredentialStorePluginImpl 
+    - title: DefaultCredentialStorePluginImpl (to do)
       url: /doc-config-exec-context-plugin-impls-DefaultCredentialStorePluginImpl.html
       output: web
 
-    - title: DefaultEventPluginIimpl
-      url: /doc-config-exec-context-plugin-impls-DefaultEventPluginIimpl.html
+    - title: DefaultEventPluginImpl (to do)
+      url: /doc-config-exec-context-plugin-impls-DefaultEventPluginImpl.html
       output: web
 
-    - title: DefaultRuntimePropertiesPluginImpl
+    - title: DefaultRuntimePropertiesPluginImpl (to do)
       url: /doc-config-exec-context-plugin-impls-DefaultRuntimePropertiesPluginImpl.html
       output: web
 
-    - title: DefaultUserInteractionCallbackPluginImpl
+    - title: DefaultUserInteractionCallbackPluginImpl (to do)
       url: /doc-config-exec-context-plugin-impls-DefaultUserInteractionCallbackPluginImpl.html
       output: web
 
-    - title: DefaultWorkspacePluginFactory
+    - title: DefaultWorkspacePluginFactory (to do)
       url: /doc-config-exec-context-plugin-impls-DefaultWorkspacePluginFactory.html
       output: web
 
-    - title: MainModuleVersionWorkspacePluginFactory
+    - title: MainModuleVersionWorkspacePluginFactory (to do)
       url: /doc-config-exec-context-plugin-impls-MainModuleVersionWorkspacePluginFactory.html
       output: web

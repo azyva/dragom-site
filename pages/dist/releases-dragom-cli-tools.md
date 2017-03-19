@@ -1,6 +1,6 @@
 ---
 title: dragom-cli-tools releases
-keywords: releases, dragom-cli-tools
+# keywords:
 last_updated: 2016-12-05
 # tags: [dist]
 # summary: ""

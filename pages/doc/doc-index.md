@@ -1,6 +1,6 @@
 ---
 title: Documentation
-keywords: documentation
+# keywords:
 last_updated: 2017-03-12
 # tags: [doc]
 # summary: ""
@@ -34,3 +34,5 @@ Dragom is a plugin-based extensible framework which can be extended. Developers
 need to learn how Dragom is designed, how to develop new plugins, jobs and
 tools, or extend it in other ways. This is documented in the
 [developer documentation](doc-dev-index.html).
+
+{% include links.html %}
