@@ -38,7 +38,7 @@ Example property value: `https://github.com`
 Property types
 --------------
 
-###Model properties
+### Model properties
 
 Model properties are defined within the [model][doc-config-design-model]. Model
 properties are associated with
@@ -116,7 +116,7 @@ Node                        |Value of `PROP`
 `ClassificationNode/module2`|`value3`
 `ClassificationNode/module3`|`value1`
 
-###Execution context properties {#exec-context-properties}
+### Execution context properties {#exec-context-properties}
 
 Execution context properties are defined within the
 [execution context][doc-config-design-exec-context] of tools, which is
@@ -128,7 +128,7 @@ For example, execution context properties are used to persist the
 [root module versions][doc-config-design-root-module-versions]
 associated with a workspace. 
 
-###Tool properties
+### Tool properties
 
 Tool properties are defined when invoking tools. They live for the duration
 of a tool execution. Tool properties are static in that they provide a
@@ -143,7 +143,7 @@ defining tool properties in a way similar to how Java system properties are
 defined when invoking java. But tool properties are not Java system properties.
 Java system properties do not become tool properties and vice-versa.
 
-###Initialization properties {#init-properties}
+### Initialization properties {#init-properties}
 
 Initialization properties are similar to model properties in that they are
 generally static and can be considered global. But instead of being defined
@@ -165,7 +165,7 @@ corresponding initialization properties. Fir example, Java system property
 The default tool initialization bootstrap code and scripts allows defining
 initialization properties in the 
 
-###Runtime properties
+### Runtime properties
 
 The property types above refer to physical locations where they are defined.
 Dragom also supports runtime properties.
@@ -262,10 +262,3 @@ runtime property.
 [//]: # (TODO: should provide a diagram to help undertand the various property types)
 
 {% include links.html %}
-
-
-
-
-
-parent reference in properties?
-
