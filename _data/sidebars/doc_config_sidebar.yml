@@ -57,6 +57,10 @@ entries:
       url: /doc-config-design-properties.html
       output: web
 
+    - title: Tool bootstrap process
+      url: /doc-config-design-tool-bootstrap-process.html
+      output: web
+
   - title: Model plugins
     output: web
     folderitems:
@@ -159,6 +163,10 @@ entries:
 
     - title: Initialization properties (to do)
       url: /doc-config-config-init-properties.html
+      output: web
+
+    - title: Java system properties (to do)
+      url: /doc-config-config-sys-properties.html
       output: web
 
     - title: Runtime properties (to do)

@@ -116,6 +116,8 @@ Node                        |Value of `PROP`
 `ClassificationNode/module2`|`value3`
 `ClassificationNode/module3`|`value1`
 
+Model properties are documented [here][doc-config-config-model-properties].
+
 ### Execution context properties {#exec-context-properties}
 
 Execution context properties are defined within the
@@ -127,6 +129,10 @@ tool execution.
 For example, execution context properties are used to persist the
 [root module versions][doc-config-design-root-module-versions]
 associated with a workspace. 
+
+Execution context properties are documented
+[here][doc-config-config-exec-context-properties].
+
 
 ### Tool properties
 
@@ -140,8 +146,16 @@ since this varies between different tool invocations.
 
 The tools provided with Dragom support the `-D` command line option which allows
 defining tool properties in a way similar to how Java system properties are
-defined when invoking java. But tool properties are not Java system properties.
-Java system properties do not become tool properties and vice-versa.
+defined when invoking java. But tool properties are not Java system properties,
+and vice-versa.
+
+The tools provided with Dragom also support defining a file which contain tool
+properties.
+
+See [tool bootstrap process][doc-config-design-tool-bootstrap-process] for more
+information.
+
+Tool properties are documented [here][doc-config-config-tool-properties].
 
 ### Initialization properties {#init-properties}
 
@@ -157,13 +171,49 @@ credentials for authenticated access to external systems such as Jenkins or
 BitBucket Server would generally be an initialization property.
 
 The default tool initialization bootstrap code recognizes Java system
-properties with the prefix `org.azyva.dragom.init-property.` and infers the
-corresponding initialization properties. Fir example, Java system property
+properties prefixed with `org.azyva.dragom.init-property.` and infers the
+corresponding initialization properties. For example, Java system property
 `org.azyva.dragom.init-property.PROP` defines the initialization property
 `PROP`.
 
+Dragom loads the classpath resource `/META-INF/dragom-init.properties` and
+makes properties defined therein initialization properties. This resource is
+part of the dragom-cli-tools JAR, but configurators can override it by providing
+another version earlier in the classpath. 
+
+The tools provided with Dragom support defining a user properties file which
+contain initialization properties. 
+
 The default tool initialization bootstrap code and scripts allows defining
-initialization properties in the 
+initialization properties in the set-env.sh, dragom-set-env.sh, set-env.cmd or
+dragom-set-env.cmd.
+
+See [tool bootstrap process][doc-config-design-tool-bootstrap-process] for more
+information.
+
+Model properties are documented [here][doc-config-config-init-properties].
+
+### Java system properties
+
+Java system properties are not specific to Dragom. Java system properties may
+need to be specified within the Dragom installation to control Java-specific
+behavior, such as proxies, logging, etc.
+
+Although the other types of properties mentionned above are preferred, Dragom
+uses some Java system properties which affect the
+[tool bootstrap process][doc-config-design-tool-bootstrap-process], which
+executes before the other types of properties are considered.
+
+Dragom loads the classpath resource `/META-INF/dragom.properties` and makes
+properties defined therein Java system properties. This resource is part of the
+dragom-cli-tools JAR, but configurators can override it by providing another
+version earlier in the classpath.
+
+See the comment about Java system properties prefixed with
+`org.azyva.dragom.init-property.` in
+[Initialization properties](#init-properties).  
+
+Java system properties are documented [here][doc-config-config-sys-properties].
 
 ### Runtime properties
 
@@ -173,12 +223,15 @@ Dragom also supports runtime properties.
 Just as for the other property types, a developer can decide to refer to a
 property as a runtime property instead of another specific property type.
 
+#### DefaultRuntimePropertiesPluginImpl
+
 The concept of runtime properties is implemented using
 [RuntimePropertiesPlugin][doc-config-exec-context-plugins-RuntimePropertiesPlugin]
 meaning that the exact nature of runtime properties is arbitrary. Developers
 use runtime properties by accessing them using this plugin.
 
-But [DefaultRuntimePropertiesPluginImpl][doc-config-exec-context-plugin-impls-DefaultRuntimePropertiesPluginImpl]
+But
+[DefaultRuntimePropertiesPluginImpl][doc-config-exec-context-plugin-impls-DefaultRuntimePropertiesPluginImpl]
 provides a very useful implementation of this plugin which is expected to be
 used in most cases.
 
@@ -212,6 +265,8 @@ and not defined at all for a distribution local to developers' workstation so
 that the get the default safer behavior of having user interaction, unless the
 user invokes the Dragom tool by defining the tool property.
 
+#### Runtime properties are modifiable
+
 Runtime properties can also be modified at runtime.
 DefaultRuntimePropertiesPluginImpl stores a modified runtime property in
 execution context transient data, regardless of from where the property was
@@ -221,6 +276,8 @@ specific action being taken, or to all subsequent similar confirmation
 requests. It does this by modifying the value of the runtime property so that
 it remains available for subsequent requests. And the user can still invoke a
 tool by specifying the runtime property to disable interaction from the start.
+
+#### Runtime properties are the most used
 
 Most properties used within Dragom are runtime properties because of the
 flexibility they offer to the configurator and user. But not all properties can
@@ -233,6 +290,8 @@ properties defined globally (model or initialization) in order to support
 deploying Dragom as a background service in which global properties are
 expected to not change, and use runtime properties for potentially
 tool-specific properties. 
+
+#### Node inheritance
 
 Runtime properties can be accessed by specifying a
 [model][doc-config-design-model] node. For DefaultRuntimePropertiesPluginImpl,
@@ -258,6 +317,8 @@ properties).
 It is the code which accesses a runtime properties which decides to access it
 in the context of a specific node, or globally. This is documented for each
 runtime property.
+
+Runtime properties are documented [here][doc-config-config-runtime-properties].
 
 [//]: # (TODO: should provide a diagram to help undertand the various property types)
 
