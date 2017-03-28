@@ -1,11 +1,11 @@
 ---
-title: Module versions
+title: Root ModuleVersion
 # keywords:
 last_updated: 2017-03-18
 # tags: [doc]
 # summary: ""
 sidebar: doc_config_sidebar
-permalink: doc-config-design-module-versions.html
+permalink: doc-config-design-root-module-version.html
 toc: false
 # folder: doc
 ---

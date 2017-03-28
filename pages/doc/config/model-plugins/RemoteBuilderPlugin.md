@@ -10,4 +10,6 @@ toc: false
 # folder: doc
 ---
 
+??? mention the fact that a handle is returned for a build. Mentionned in runtime-properties.md
+
 {% include links.html %}

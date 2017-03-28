@@ -17,31 +17,43 @@ entries:
     output: web
     folderitems:
 
-    - title: Model (to do)
+    - title: Model
       url: /doc-config-design-model.html
       output: web
 
-    - title: Node paths (to do)
-      url: /doc-config-design-node-paths.html
+    - title: Module
+      url: /doc-config-design-module.html
       output: web
 
-    - title: Reference paths and matchers (to do)
-      url: /doc-config-design-reference-path-matchers.html
+    - title: ClassificationNode
+      url: /doc-config-design-classification-node.html
       output: web
 
-    - title: Versions and artifact versions (to do)
-      url: /doc-config-design-versions-artifact-versions.html
+    - title: Artifacts (to do)
+      url: /doc-config-design-artiracts.html
       output: web
 
-    - title: Module versions (to do)
-      url: /doc-config-design-module-versions.html
+    - title: NodePath (to do)
+      url: /doc-config-design-node-path.html
       output: web
 
-    - title: Root module versions (to do)
-      url: /doc-config-design-root-module-versions.html
+    - title: ReferencePath and ReferencePathMatcher (to do)
+      url: /doc-config-design-reference-path-matcher.html
       output: web
 
-    - title: Execution context (to do)
+    - title: Version and ArtifactVersion (to do)
+      url: /doc-config-design-version-artifact-version.html
+      output: web
+
+    - title: ModuleVersion (to do)
+      url: /doc-config-design-module-version.html
+      output: web
+
+    - title: Root ModuleVersion (to do)
+      url: /doc-config-design-root-module-version.html
+      output: web
+
+    - title: ExecContext (to do)
       url: /doc-config-design-exec-context.html
       output: web
 
@@ -125,7 +137,7 @@ entries:
       url: /doc-config-model-plugins-VersionClassifierPlugin.html
       output: web
 
-  - title: Execution context plugins
+  - title: ExecContext plugins
     output: web
     folderitems:
 
@@ -157,7 +169,7 @@ entries:
       url: /doc-config-config-model-properties.html
       output: web
 
-    - title: Execution context properties (to do)
+    - title: ExecContext properties (to do)
       url: /doc-config-config-exec-context-properties.html
       output: web
 
@@ -357,7 +369,7 @@ entries:
       url: /doc-config-model-plugin-impls-UniformSelectStaticVersionPluginImpl.html
       output: web
 
-  - title: Execution context plugin implementations
+  - title: ExecContext plugin implementations
     output: web
     folderitems:
 

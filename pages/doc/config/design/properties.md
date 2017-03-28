@@ -40,38 +40,38 @@ Property types
 
 ### Model properties
 
-Model properties are defined within the [model][doc-config-design-model]. Model
+Model properties are defined within the [Model][doc-config-design-model]. Model
 properties are associated with
-[classification nodes](doc-config-design-model.html#classification-nodes) and
-[modules](doc-config-design-model.html#modules) within the model.
+[ClassificationNode's][doc-config-design-classification-node] and
+[Module's][doc-config-design-module] within the Model.
 
-Since the model is generally static, these properties can be considered global
+Since the Model is generally static, these properties can be considered global
 and static as well.
 
-For example the property defining the base remote Git repository URL is a model
+For example the property defining the base remote Git repository URL is a Model
 property.
 
-The default model implementation supports property inheritance. A property
-defined for a classification node applies to child classification nodes or
-modules at any level, unless the property is redefined (with the same name) at
+The default Model implementation supports property inheritance. A property
+defined for a ClassificationNode applies to child ClassificationNode's or
+Module's at any level, unless the property is redefined (with the same name) at
 a lower level.
 
 If within the value of a property `$parent$` is used, it is replaced by the
-value of the same property evaluated in the context of the parent node. This is
+value of the same property evaluated in the context of the parent Node. This is
 expected to be rarely used. The only situation it is believed to be useful is
 for managing Maven properties where new properties can be introduced by child
-nodes. See
+Node's. See
 [MavenBuilderPluginImpl][doc-config-model-plugin-impls-MavenBuilderPluginImpl]
 for more information. 
 
-A property definition can also apply only to the node on which it is defined in
+A property definition can also apply only to the Node on which it is defined in
 which case there is no inheritance to lower levels. This also stops inheritance
 from a higher level property.
 
-The default model implementation splits the actual model and its configuration
-so that the model configuration can be defined using different model
-configuration implementations. Here are some model property examples for the
-XML-based model configuration:
+The default Model implementation splits the actual Model and its configuration
+so that the Model configuration can be defined using different Model
+configuration implementations. Here are some Model property examples for the
+XML-based Model configuration:
 
 ```xml
 <config>
@@ -105,34 +105,35 @@ XML-based model configuration:
 </config>
 ```
 
-With the above configuration, property `PROP_A` has the following value when
+With the above configuration, property `PROP` has the following value when
 evaluated in the following contexts:
 
 Node                        |Value of `PROP`
 ----------------------------|----------------
-`root`                      |`value1`
+root (globally)             |`value1`
 `ClassificationNode`        |`value2`
 `ClassificationNode/module1`|undefined
 `ClassificationNode/module2`|`value3`
 `ClassificationNode/module3`|`value1`
 
+Defining or accessing a model property globally is synonym with defining or
+accessing it for the root Node.
+
 Model properties are documented [here][doc-config-config-model-properties].
 
-### Execution context properties {#exec-context-properties}
+### ExecContext properties {#exec-context-properties}
 
-Execution context properties are defined within the
-[execution context][doc-config-design-exec-context] of tools, which is
-generally closely related to the workspace. Therefore execution context
-properties can be customized per workspace. They can also be modified during
-tool execution.
+ExecContext properties are defined within the
+[ExecContext][doc-config-design-exec-context] of tools, which is generally
+closely related to the workspace. Therefore ExecContext properties can be
+customized per workspace. They can also be modified during tool execution.
 
-For example, execution context properties are used to persist the
-[root module versions][doc-config-design-root-module-versions]
+For example, ExecContext properties are used to persist the
+[root ModuleVersion's][doc-config-design-root-module-version]
 associated with a workspace. 
 
-Execution context properties are documented
+ExecContext properties are documented
 [here][doc-config-config-exec-context-properties].
-
 
 ### Tool properties
 
@@ -140,7 +141,7 @@ Tool properties are defined when invoking tools. They live for the duration
 of a tool execution. Tool properties are static in that they provide a
 unidirectional way for the user to communicate configuration data to tools.
 
-For example, the property which defines which module version to change and to
+For example, the property which defines which ModuleVersion to change and to
 which version to map it to would generally be specified using a tool property
 since this varies between different tool invocations. 
 
@@ -159,9 +160,9 @@ Tool properties are documented [here][doc-config-config-tool-properties].
 
 ### Initialization properties {#init-properties}
 
-Initialization properties are similar to model properties in that they are
+Initialization properties are similar to Model properties in that they are
 generally static and can be considered global. But instead of being defined
-within the model, they are generally configured within the Dragom
+within the Model, they are generally configured within the Dragom
 installation. Different Dragom distributions (local to developers' workstation
 or to be installed on a central build automation server) can define
 initialization properties differently.
@@ -193,7 +194,7 @@ information.
 
 Initialization properties are documented [here][doc-config-config-init-properties].
 
-### Java system properties
+### Java system properties {#sys-properties}
 
 Java system properties are not specific to Dragom. Java system properties may
 need to be specified within the Dragom installation to control Java-specific
@@ -239,9 +240,9 @@ This plugin implementation checks for the existence of the property in the
 following locations in sequence:
 
 1. [Transient data](doc-config-design-exec-context.html#transient-data) stored
-in the execution context
+in the ExecContext
 2. [Tool properties](#tool-properties)
-3. [Execution context properties](#exec-context-properties)
+3. [ExecContext properties](#exec-context-properties)
 4. [Initialization properties](#init-properties)
 5. [Model properties](#model-properties)
 
@@ -249,7 +250,7 @@ As soon as the property is found it is returned.
 
 This allows decoupling the decision of a developer to use a certain type of
 property from the needs of the configurator in terms of where the property
-should be defined. It also allows global properties (model or initialization)
+should be defined. It also allows global properties (Model or initialization)
 to be overridden by the user when invoking a tool.
 
 For example, the default behavior of Dragom is to interact with the user by
@@ -257,25 +258,62 @@ asking confirmation when important actions are about to be taken, such as
 creating a new version. But if Dragom is used in a non-interactive context on a
 build automation server, interaction with the user is not possible. Code uses
 the value of a runtime property to know if confirmation must be obtained from
-the user. This allows the property to be defined as a model or initialization
+the user. This allows the property to be defined as a Model or initialization
 property in the case where Dragom is always used in a non-interactive context.
-In another scenario, the property could not be defined globally (model or
+In another scenario, the property could not be defined globally (Model or
 initialization) and be defined as a tool property on a build automation server,
 and not defined at all for a distribution local to developers' workstation so
 that the get the default safer behavior of having user interaction, unless the
 user invokes the Dragom tool by defining the tool property.
 
+#### Node inheritance
+
+Runtime properties can be accessed by specifying a
+[Node](doc-config-design-model.html#Node). For
+DefaultRuntimePropertiesPluginImpl, this is obviously used when falling back
+to Model properties which are specifically associated with Node's. But for
+other property locations, DefaultRuntimePropertiesPluginImpl implements a
+naming hierarchy based on the [NodePath][doc-config-design-node-path].
+
+For example, for the Module `ClassificationNode/module1` and runtime property
+`PROP`, the following properties are accessed in turn for each property
+location:
+
+1. `ClassificationNode.module1.PROP`
+2. `ClassificationNode.PROP`
+3. `PROP`
+
+As soon as the property is found it is returned. If it is not found under any
+of these names for a given property type, the plugin moves on to the next
+property location (ExecContext transient data, tool properties, ExecContext
+properties, initialization properties and the Model properties).
+
+It is the code which accesses a runtime properties which decides to access it
+in the context of a specific Node, or globally. This is documented for each
+runtime property.
+
+When a runtime property is accessed in the context of a specific Node, the
+configurator will often decide to define it globally for simplicity and if
+appropriate, but can also define it for the Node for which it is desired to
+have the property have its effect, or any Node in its parent hierarchy.
+
+When a runtime property is accessed globally, the configurator has no choice
+but to define it globally since otherwise it will not be seen.
+
+Defining or accessing a runtime property globally is equivalent to defining or
+accessing it for the root Node.
+
 #### Runtime properties are modifiable
 
 Runtime properties can also be modified at runtime.
 DefaultRuntimePropertiesPluginImpl stores a modified runtime property in
-execution context transient data, regardless of from where the property was
-obtained. To extend on the example above, when Dragom asks for confirmation
-from the user, it allows the user to apply a positive response to either the
-specific action being taken, or to all subsequent similar confirmation
-requests. It does this by modifying the value of the runtime property so that
-it remains available for subsequent requests. And the user can still invoke a
-tool by specifying the runtime property to disable interaction from the start.
+ExecContext transient data, regardless of from where the property was obtained.
+To extend on the example above, when Dragom asks for confirmation from the
+user, it allows the user to apply a positive response to either the specific
+action being taken, or to all subsequent similar confirmation requests. It does
+this by modifying the value of the runtime property so that it remains
+available for subsequent requests. And the user can still invoke a tool by
+defining the runtime property to disable interaction from the start.
 
 #### Runtime properties are the most used
 
@@ -286,37 +324,10 @@ that they should be accessed whenever needed and not cached. But for some
 configuration data it is better if they can be considered static and immutable,
 such as the URL of a remote Git repository. Also, even if the code does not
 modify a runtime property, it is often more appropriate to specifically use
-properties defined globally (model or initialization) in order to support
+properties defined globally (Model or initialization) in order to support
 deploying Dragom as a background service in which global properties are
 expected to not change, and use runtime properties for potentially
 tool-specific properties. 
-
-#### Node inheritance
-
-Runtime properties can be accessed by specifying a
-[model][doc-config-design-model] node. For DefaultRuntimePropertiesPluginImpl,
-this is obviously used when falling back to model properties which are
-specifically associated with nodes. But for other property locations,
-DefaultRuntimePropertiesPluginImpl implements a naming hierarchy based on the
-[node path][doc-config-design-node-paths].
-
-For example, for the module `ClassificationNode/module1` and runtime property
-`PROP`, the following properties are accessed in turn for each property
-location:
-
-1. `ClassificationNode.module1.PROP`
-2. `ClassificationNode.PROP`
-3. `PROP`
-
-As soon as the property is found it is returned. If it is not found under any
-of these names for a given property type, the plugin moves on to the next
-property location (execution context transient data, tool properties,
-execution context properties, initialization properties and the model
-properties).
-
-It is the code which accesses a runtime properties which decides to access it
-in the context of a specific node, or globally. This is documented for each
-runtime property.
 
 Runtime properties are documented [here][doc-config-config-runtime-properties].
 

@@ -1,11 +1,11 @@
 ---
-title: Root module versions 
+title: Artifacts 
 # keywords:
 last_updated: 2017-03-18
 # tags: [doc]
 # summary: ""
 sidebar: doc_config_sidebar
-permalink: doc-config-design-root-module-versions.html
+permalink: doc-config-design-artifacts.html
 toc: false
 # folder: doc
 ---
