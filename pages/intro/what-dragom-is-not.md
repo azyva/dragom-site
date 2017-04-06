@@ -13,5 +13,5 @@ toc: false
 Under construction...
 
 <!--
-Not gui. Not web-based. But can integrate.
+Not gui. Not web-based. But can integrate. Not Jenkins or Maven plugin, but maybe eventually.
 -->
