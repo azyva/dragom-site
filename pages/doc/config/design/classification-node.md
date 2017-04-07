@@ -11,7 +11,7 @@ toc: false
 ---
 
 The ClassificationNode is a building block of the
-[Model][doc-config-design-model].
+[Model][doc-config-design-model]. A Model has a single root ClassificationNode.
 
 ClassificationNode's are similar to directories, but have no direct
 relationship to directories in a file system. In particular they have no
@@ -22,6 +22,12 @@ and Module's.
 
 Like Module's, a ClassificationNode has a name. By convention the name of a
 ClassificationNode is written in PascalCase notation. 
+
+A ClassificationNode provides a namespace for Node's it defines. Node names
+must be unique within a given ClassificationNode only. They need not be unique
+globally or across ClassificationNode's, unless of course they map to concrete
+concepts where name uniqueness is enforced in another scope, such as multiple
+Git repositories under a given base URL.
 
 Compared to Module's, ClassificationNode's are more abstract. The relation
 between the name of a ClassificationNode and a concrete concept is not always
@@ -62,18 +68,14 @@ defining the Module hierarchy, inheritance being one of them. Others can even
 be external to Dragom if the Model is exploited for purposes outside of Dragom
 such as for defining access rules.
 
-Module-Artifact mapping
------------------------
+Module-Artifact mapping configuration
+-------------------------------------
 
-Dragom operates mostly at the source code level but specifically supports
-Artifact-based developpement. In this context references between
-[ModuleVersion's][doc-config-design-module-version] are actually expressed in
-terms of Artifact coordinates.
+See [Module-Artifact mapping][doc-config-design-module-artifact-mapping].
 
-Dragom often needs to map Artifact coordinates to Module's and ModuleVersion's
-and vice-versa. Although this mapping can be defined explicitly for each
-Module, this mapping can be inferred from the ClassificationNode hierarchy with
-much less configuration.
+Module-Artifact mapping can be defined explicitly for each Module, this
+mapping can be inferred from the ClassificationNode hierarchy with much less
+configuration.
 
 Consider the following simplified hierarchy:
 
