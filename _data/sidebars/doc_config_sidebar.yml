@@ -29,31 +29,31 @@ entries:
       url: /doc-config-design-classification-node.html
       output: web
 
-    - title: Artifact (to do)
-      url: /doc-config-design-artiract.html
+    - title: Artifact
+      url: /doc-config-design-artifact.html
       output: web
 
-    - title: Module-Artifact mapping (to do)
+    - title: Module-Artifact mapping
       url: /doc-config-design-module-artifact-mapping.html
-      output:web
+      output: web
 
-    - title: NodePath (to do)
+    - title: NodePath
       url: /doc-config-design-node-path.html
       output: web
 
-    - title: Version (to do)
+    - title: Version
       url: /doc-config-design-version.html
       output: web
 
-    - title: ArtifactVersion (to do)
+    - title: ArtifactVersion
       url: /doc-config-design-artifact-version.html
       output: web
 
-    - title: ModuleVersion (to do)
+    - title: ModuleVersion
       url: /doc-config-design-module-version.html
       output: web
 
-    - title: Version-ArtifactVersion mapping (to do)
+    - title: Version-ArtifactVersion mapping
       url: /doc-config-design-version-artifact-version-mapping.html
       output: web
 
@@ -61,7 +61,15 @@ entries:
       url: /doc-config-design-references-dependencies.html
       output: web
 
-    - title: ReferencePath and ReferencePathMatcher (to do)
+    - title: ReferenceGraph (to do)
+      url: /doc-config-design-reference-graph.html
+      output: web
+
+    - title: ReferencePath (to do)
+      url: /doc-config-design-reference-path.html
+      output: web
+
+    - title: ReferencePathMatcher
       url: /doc-config-design-reference-path-matcher.html
       output: web
 
