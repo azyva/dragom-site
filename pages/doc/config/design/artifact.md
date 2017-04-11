@@ -62,11 +62,40 @@ coordinate axis in the following way:
 Group              |Description
 -------------------|-----------
 groupId, artifactId|Together these axis uniquely identify a logical grouping of Artifacts. 
-version            |This is he version of the grouping
+version            |This is the version of the grouping
 type, classifier   |These axis distinguish the various Artifacts within a (version of a) grouping.
+
+?Another heading here?
+---
+
+All the Artifacts under a given groupId, artifactId and version (often
+abbreviated GAV) are generally produced at once by performing the build of some
+module. The groupId and artifactId used is specific to this module (no other
+module uses the same groupId/artifactId combination). And the version of the
+Artifacts is specific to the version of the module being built.
+
+Note that in the paragraph above, we talk about "module" and "version", not
+"Module" and "Version". This subtlety stems from the fact despite the above,
+Dragom does not impose that a given ModuleVersion produces Artifacts with the
+same groupId and artifactId. It is legitimate for a given ModuleVersion to
+produce Artifacts with different groupId and artifactId. However, this is not
+true for the version. A given ModuleVersion must produce Artifacts with the
+same version, which we call ArtifactVersion. If that was not the case,
+traceability and mapping between Version and ArtifactVersion would be very
+confusing for humans, too complex to support in Dragom and would not provide
+significant benefits.
+
+Maven supports the concepts of modules by which a single
+
+
+ 
+Given that Artifacts are produced by performing the build of a module and that 
 
 
 dragom uses ArtifactGroupId and ArtifactVersion.
 mapping groupId to NodePath.
+when we talk about an Artifact, we often mean the grouping
+we talk about all the artifactids produced by a Module
+Maven modules are seen as implementation details and must share the same version, which makes sense.
 
 {% include links.html %}

@@ -36,11 +36,11 @@ direct.
 Reasons for organizing Module's hierarchically using ClassificationNode's
 include:
 
-* Facilitate browsing and locating Module's
-* Provide a uniform naming hierarchhy by which Module's can be identified by
+- Facilitate browsing and locating Module's
+- Provide a uniform naming hierarchhy by which Module's can be identified by
   Dragom and users
-* Inheritance
-* Automatic configuration of bidirectional mapping between Modules and Artifact's
+- Inheritance
+- Automatic configuration of bidirectional mapping between Modules and Artifact's
 
 Some of these are explicitly described below.
 
