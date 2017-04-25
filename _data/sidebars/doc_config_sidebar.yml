@@ -65,7 +65,7 @@ entries:
       url: /doc-config-design-reference-graph.html
       output: web
 
-    - title: ReferencePath (to do)
+    - title: ReferencePath
       url: /doc-config-design-reference-path.html
       output: web
 

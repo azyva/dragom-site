@@ -130,7 +130,7 @@ tempted to consider these modules as work units. In fact they can when working
 on the Module outside of Dradom. But Dragom remains unaware of these modules.
 They are implementation details of the Module as known by Dragom.
 
-Independance of Module's
+Independence of Module's
 ------------------------
 
 It should be obvious that Dragom considers Module as independant of each other.
@@ -141,6 +141,6 @@ Git support submodules and Subversion the similar concept of externals. These
 could allow linking a directory in a Module hierarchy to some (other Version
 of an) other Module. Dragom does not support these concepts. When using Dragom
 relations between Module's must be represented by soft references
-expressed in the source code of tbe Module's (generally in build scripts).
+expressed in the source code of the Module's (generally in build scripts).
 
 {% include links.html %}

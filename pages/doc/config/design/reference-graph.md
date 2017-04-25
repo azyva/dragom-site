@@ -10,4 +10,6 @@ toc: false
 # folder: doc
 ---
 
+A ReferenceGraph is composed of a set of root ModuleVersion's with their referenced ModuleVersion's and the link to them, and so on. A ReferencePath is the linear path from a root ModuleVersion to some leaf ModuleVersion.
+
 {% include links.html %}

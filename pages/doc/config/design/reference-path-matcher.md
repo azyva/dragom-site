@@ -6,14 +6,14 @@ last_updated: 2017-04-10
 # summary: ""
 sidebar: doc_config_sidebar
 permalink: doc-config-design-reference-path-matcher.html
-toc: false
+toc: true
 # folder: doc
 ---
 
 Many Dragom jobs and tools operate by traversing a ReferenceGraph and
 performing some actions on the ModuleVersion's in it. Generally the user will
 not want to target all ModuleVersion's in the ReferenceGraph. To allow the user
-to select which ModuleVersion's should be tatgeted by a job, Dragom supports
+to select which ModuleVersion's should be targeted by a job, Dragom supports
 ReferencePathMatcher's.
 
 A ReferencePathMatcher is a boolean condition which either matches or does not
@@ -64,7 +64,10 @@ Element       |See [Element ReferencePathMatcher](#element-referencepathmatcher)
 Among the ReferencePathMatcher implementations above, only the "element"
 implementation is explicitly exposed to the user. The others are used
 internally within Dragom when multiple ReferencePathMatcher's need to be
-combined to obtain the desired effective ReferencePathMatcher.  
+combined to obtain the desired effective ReferencePathMatcher.
+
+Because of this, from the user's point of view, when we speak about
+ReferencePathMatcher's, we generally mean element ReferencePathMathcer.
 
 Element ReferencePathMatcher
 ----------------------------
@@ -227,11 +230,81 @@ explanations:
 Effective ReferencePathMatcher
 ------------------------------
 
-generally a logical combination
+Dragom tools allow the user to define ReferencePathMatcher's to select the
+ReferencePath's and ModuleVersion's on which to operate. Without the user
+explicitly specifying it, these ReferencePathMatcher's are actually the
+operands of a "Or" ReferencePathMatcher that is implicitly created internally
+by Dragom and which is used as a surrogate representing the
+ReferencePathMatcher's defined by the user, providing the intuitively expected
+behavior that each ReferencePathMatcher selects a different subset of the
+ReferencePath's in the ReferenceGraph, the union of which being the set of all
+selected ReferencePath's.
+
+Other factors can also affect the ReferencePath's targeted by a tool. For
+example, Dragom supports defining ReferencePathMatcher's to impose
+workspace-level constraints on the ReferencePath's selected by tools operating
+within the workspace. These ReferencePathMatcher's are combined as operands of
+a "Or" ReferencePathMatcher created internally by Dragom, wbich is itself
+combined using a "And" ReferencePathMatcher with the "Or" ReferencePathMatcher
+representing the ReferencePathMatcher's defined by the user at tool invocation
+time.
+
+It is this single top-level ReferencePathMatcher that is actually used by a
+tools and is called the effective ReferencePathMatcher.
 
 Optimization for children
 -------------------------
 
+Although a ReferencePathMatcther can theoretically match arbitrary
+ReferencePath's, given such a ReferencePath, which it may or may not match, we
+can often infer on its ability to match its children.
 
+For example, consider the following element ReferencePathMatcher:
+
+`**->/Domain/app-a:D/master`
+
+This ReferencePathMatcher matches any ReferencePath whose leaf ModuleVersion is
+`Domain/app-a:D/master`. Given the ReferencePath
+`OtherDomain/app-b:D/master->Domain/app-a/D/master` (which it matches), we know
+it does not match any of its children. Also, given the (single element)
+ReferencePath `OtherDomain/app-b:D/master`, we know it may match some of its
+children (in this case it matches exactly one child).
+
+As another example. consider the following element ReferencePathMatcher:
+
+`*->/Domain/app-a:D/master->**`
+
+This ReferencePathMatcher matches any ReferencePath whose 2<sup>nd</sup>
+ModuleVersion is `Domain/app-a:D/master`. Given the (single element)
+ReferencePath `Domain/app-a:D/develop`, which it does not match, we know it
+does not match any of its children. Any child not having
+`Domain/app-a:D/master` as its 2<sup>nd</sup> ModuleVersion is not matched and
+no children exist with the 2<sup>nd</sup> ModuleVersion `Domain/app-a:D/master`
+since this would create a cycle in the ReferencePath.
+
+Also, given the ReferencePath `OtherDomain/app-b->Domain/app-a:D/master`, wbich
+it matches, we know it matches all of its children.
+
+This inferred knowledge about a ReferencePathMatcher's ability to match
+children of a given ReferencePath is used to optimize ReferenceGraph traversal
+by avoiding to visit parts of a ReferenceGraph whose ReferencePath's cannot be
+matched.
+
+The exact inference rules are not documented as they can evolve over time to
+improve the optimizations. When the current rules do not infer on a
+ReferencePathMatcher's ability to match children of a ReferencePath, they
+conclude that children can be matched, which is always safe as this forces the
+traversal of the children and applying the effective ReferencePathMatcher to
+each of them.
+
+Note that the ReferencePathMatcher's implementing logic conditions do support
+these optimizations based on their operands' optimizations. For example, a
+"And" ReferencePathMatcher can match the children of a ReferencePath if and
+only if all of its operand ReferencePathMatcher's can match its children. As
+another example, the "Not" ReferencePathMatcher does not match any children of
+a ReferencePath if its operand ReferencePathMatcher matches all of its
+children.
 
 {% include links.html %}
+
+[//]: # (TODO: Have a graphic for Effective ReferencePathMatcher)

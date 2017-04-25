@@ -10,4 +10,8 @@ toc: false
 # folder: doc
 ---
 
+
+
 {% include links.html %}
+
+[//]: # (TODO: no internal dependencies; only between ModuleVersion's; internal references are implementation details; submodules can refer between them, but once get out to another ModuleVersion, cannot come back since no cycle.)
