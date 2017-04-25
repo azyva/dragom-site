@@ -20,4 +20,4 @@ and vice-versa.
 
 {% include links.html %}
 
-[//]: # (to be completed. taken originally from classification-node)
+[//]: # (to be completed. taken originally from classification-node. need to merge or consider the material in artifact.md)

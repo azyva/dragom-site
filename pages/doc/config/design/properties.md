@@ -10,9 +10,6 @@ toc: true
 # folder: doc
 ---
 
-Introduction
-------------
-
 Dragom is highly configurable. Plugins and many functionalities can be
 configured using different [types](#property-types) of properties which
 configurators define at various levels.

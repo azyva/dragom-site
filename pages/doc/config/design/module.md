@@ -15,20 +15,20 @@ The Module is a building block of the [Model][doc-config-design-model].
 A Module represents a collection of source files and directories that is an
 atomic development unit. More precisely a Module:
 
-* Has a name
-* The unit of work
-* The checkout unit from the SCM
-* The commit unit into the SCM
-* The versionning unit (branches and tags)
-* The build unit
-* Independant of other Module's
+- Has a name
+- The unit of work
+- The checkout unit from the SCM
+- The commit unit into the SCM
+- The versionning unit (branches and tags)
+- The build unit
+- Independant of other Module's
 
 Certainly Modules are composed of individual files and directories and many
 tools do not explicitly recognize Module's. For example:
 
-* Subversion makes no distinction between the semantics of various directories
+- Subversion makes no distinction between the semantics of various directories
   within a repository and allows checking out directories at any level
-* Maven sees any directory in a hierarchy having a `pom.xml` file as being
+- Maven sees any directory in a hierarchy having a `pom.xml` file as being
   buildable
 
 Despite the flexibility offered by such tools, the use of Dragom requires
@@ -97,9 +97,9 @@ For Subversion, this implies that directories representing branches and tags be
 based on other branch and tag directories of the Module, or on the conventional
 `trunk` directory. Generally a directory corresponding to a Module contains:
 
-* The `trunk` subdirectory containing the main developpement line
-* The `branches` subdirectory containing the branches
-* The `tags` subdirectory containg the tags
+- The `trunk` subdirectory containing the main developpement line
+- The `branches` subdirectory containing the branches
+- The `tags` subdirectory containg the tags
 
 Some users organize their Subversion repository with the `trunk`, `branches`
 and `tags` directories at the root. This layout, although legitimate in some
