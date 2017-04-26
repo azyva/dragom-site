@@ -113,7 +113,7 @@ The fact that the Module is the versioning unit also often has implications for
 build scripts. Maven, an Artifact-based build tool, supports modules and
 requires that each module defines its
 [ArtifactVersion][doc-config-design-artifact-version]. With Dragom, every Maven
-module of a [ModuleVeresion][doc-config-design-module-version] needs to have
+module of a [ModuleVersion][doc-config-design-module-version] needs to have
 the same ArtifactVersion. Also, references within a ModuleVersion must be to
 the ArtifactVersion of the Module. 
 
@@ -128,7 +128,7 @@ Maven supports modules. It allows building individual modules in the Module
 hierarchy, or the whole Module with a ripple effects on modules. Users can be
 tempted to consider these modules as work units. In fact they can when working
 on the Module outside of Dradom. But Dragom remains unaware of these modules.
-They are implementation details of the Module as known by Dragom.
+They are implementation details of the Module as known to Dragom.
 
 Independence of Module's
 ------------------------

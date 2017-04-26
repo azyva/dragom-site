@@ -23,5 +23,5 @@ He hopes to achieve this goal with Dragom.
 
 David can be reached at
 <a href="mailto:david.raymond@azyva.ca?Subject=Dragom">david.raymond@azyva.ca</a>.
-He will hapilly respond to people having questions about or otherwise interested
-by Dragom.
+He will hapilly respond to people having questions about or otherwise
+interested by Dragom.

@@ -61,7 +61,7 @@ entries:
       url: /doc-config-design-references-dependencies.html
       output: web
 
-    - title: ReferenceGraph (to do)
+    - title: ReferenceGraph
       url: /doc-config-design-reference-graph.html
       output: web
 

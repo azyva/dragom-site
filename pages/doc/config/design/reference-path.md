@@ -1,7 +1,7 @@
 ---
 title: ReferencePath
 # keywords:
-last_updated: 2017-04-10
+last_updated: 2017-04-25
 # tags: [doc]
 # summary: ""
 sidebar: doc_config_sidebar
@@ -26,7 +26,7 @@ ModuleVersion's.
 Within a ReferenceGraph, many different ReferencePath's can have the same leaf
 ModuleVersion. This is so since a ReferenceGraph is indeed a graph, not a tree,
 where the same ModuleVersion can be reached by references coming from different
-referrer ModuleVersion's.
+referring ModuleVersion's.
 
 Since a ReferenceGraph is acyclic, a ReferencePath is also acyclic in that a
 given ModuleVersion cannot occur twice in the same ReferencePath. This

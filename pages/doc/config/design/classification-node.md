@@ -80,16 +80,16 @@ configuration.
 Consider the following simplified hierarchy:
 
 ```
-Domain1
-  SubDomain1
+Domain
+  SubDomain
     app-a
 ```
 
 With very little configuration, Dragom can infer that builds of Module
-`Domain1/SubDomain1/app-a` produce Artifact's having the following
+`Domain/SubDomain/app-a` produce Artifact's having the following
 coordinates:
 
-GroupId   |`com.acme.domain1.sub-domain1`
+GroupId   |`com.acme.domain.sub-domain`
 ArtifactId|`app-a`
 
 Therefore ease of Module-Artifact mapping is an important consideration when
