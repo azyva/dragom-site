@@ -45,6 +45,10 @@ entries:
       url: /doc-config-design-version.html
       output: web
 
+    - title: ArtifactGroupId
+      url: /doc-config-design-artifact-group-id.html
+      output: web
+
     - title: ArtifactVersion
       url: /doc-config-design-artifact-version.html
       output: web
@@ -57,7 +61,7 @@ entries:
       url: /doc-config-design-version-artifact-version-mapping.html
       output: web
 
-    - title: References and dependencies (to do)
+    - title: References and dependencies
       url: /doc-config-design-references-dependencies.html
       output: web
 
@@ -73,7 +77,7 @@ entries:
       url: /doc-config-design-reference-path-matcher.html
       output: web
 
-    - title: Root ModuleVersion (to do)
+    - title: Root ModuleVersion
       url: /doc-config-design-root-module-version.html
       output: web
 
@@ -81,12 +85,8 @@ entries:
       url: /doc-config-design-exec-context.html
       output: web
 
-    - title: Jobs (to do)
-      url: /doc-config-design-jobs.html
-      output: web
-
-    - title: Tools (to do)
-      url: /doc-config-design-tools.html
+    - title: Jobs and tools
+      url: /doc-config-design-jobs-tools.html
       output: web
 
     - title: Properties
