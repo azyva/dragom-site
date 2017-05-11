@@ -24,8 +24,9 @@ Dragom is [different things](what-is-dragom.html) to different people with
 different documentation needs.
 
 Dragom is a highly configurable framework and tool set. Configurators need to
-learn how to configure Dragom and build preconfigured distribution packages.
-This is documented in the [configurataor documentation](doc-config-index.html).
+learn how to configure Dragom and build customized preconfigured distribution
+packages. This is documented in the
+[configurataor documentation](doc-config-index.html).
 
 Dragom provides a base tool set. End users need to learn how to use these
 tools. This is documented in the [end user documentation](doc-user-index.html).

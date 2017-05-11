@@ -69,7 +69,7 @@ combined to obtain the desired effective ReferencePathMatcher.
 Because of this, from the user's point of view, when we speak about
 ReferencePathMatcher's, we generally mean element ReferencePathMathcer.
 
-Element ReferencePathMatcher
+Element ReferencePathMatcher {#element-reference-path-matcher}
 ----------------------------
 
 The element ReferencePathMatcher matches ReferencePath's using a sequence of
@@ -227,7 +227,7 @@ explanations:
   more, where the last reference is to an Artifact having the groupId
   `com.acme` and a SNAPSHOT ArtifactVersion.
 
-Effective ReferencePathMatcher
+Effective ReferencePathMatcher {#effective-reference-path-matcher}
 ------------------------------
 
 Dragom tools allow the user to define ReferencePathMatcher's to select the

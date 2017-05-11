@@ -1,12 +1,12 @@
 ---
 title: References and dependencies
 # keywords:
-last_updated: 2017-05-01
+last_updated: 2017-05-08
 # tags: [doc]
 # summary: ""
 sidebar: doc_config_sidebar
 permalink: doc-config-design-references-dependencies.html
-toc: false
+toc: true
 # folder: doc
 ---
 
@@ -62,19 +62,63 @@ although the true build dependency is from A to B, the ReferencePath is A -> P
 -> B.
 
 Note that a dependency management declaration in a parent POM is involved only
-if the artifact is actually referenced as a versionless dependency. In the
-previous example, if A does not ha
+if the artifact is actually referenced as a versionless dependency in the
+module. In the previous example, if A did not have a (versionless) dependency
+on B, the reference from P to B would still be part of the ReferenceGraph, but
+would not actually be used. This may be seen as a problem as it implies
+ReferenceGraph's can include useless references and ModuleVersion's. But the
+fact that B is referenced by P implies that any other module which may have P
+as its parent (direct or indirect, and even a static ArtifactVersion of P) may
+use that dependency management declaration, so that when doing work involving
+P, it remains logical to take into consideration the reference to B and ensure
+it is correctly defined.
 
+A similar situation arises with Maven profiles which can contain dependencies
+and can be activated or not depending on conditions external to the module
+itself. For example a test profile could be activated for CI builds but not for
+release builds. This means that some dependencies may not always be used, even
+though Dragom unconditionally considers them as references. But the argument is
+the same: Because the dependency can be activated in some contexts, it deserves
+to be taken into consideration.
 
+Reference metadata
+------------------
 
-parent
-profiles
+To help the user in interpreting references and ReferencePath's, Dragom
+supports attaching metadata to references.
 
+In the context of Maven, for example, the module (not in the Dragom sense here)
+from which a reference comes from is stored in this metadata and shown to the
+user in ReferencePath's.
 
-job of reference manager to extract references
-meta data about references
+Internal and external references
+--------------------------------
 
+Recall that in Dragom, Module's are atomic. Build tools such as Maven support
+organizing the source code using modules (not tbe Dragom concept here). These
+modules have their own dependencies, parents and dependency management
+declarations. Some of these references refer to artifacts corresponding to
+other Module's. But other references are between the modules and therefore
+internal to the Module. It is a Dragom requirement that these internal references
+be to the same ArtifactVersion as that of the Module so that atomicity is
+preserved in fact at the ModuleVersion level.
+
+Internal references within a ModuleVersion are considered implementation
+details of the Module and are not considered by Dragom. Only external references
+are. These external references can come from any module within the Module.
+Dragom does not care and from its point of view the references all come from
+the Module.
+
+Plugin-based reference management
+---------------------------------
+
+In Dragom, it is the responsibility of the ReferenceManager plugin to manage
+the references of a Module. Here we have used Maven as an example which is
+therefore specific to the Maven implementation of this plugin
+(MavenReferenceManagerImpl). It analyses the pom.xml files of the Maven modules
+of a Module and extracts the dependencies, parents and dependency management
+declarations as references.
+
+Other build tools can obviously be supported with other plugin implementations.
 
 {% include links.html %}
-
-[//]: # (TODO: no internal dependencies; only between ModuleVersion's; internal references are implementation details (but must be within the same ModuleVersion); submodules can refer between them, but once get out to another ModuleVersion, cannot come back since no cycle.; no outside references; dependency management vs dependencies vs parent in maven)

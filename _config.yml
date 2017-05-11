@@ -105,6 +105,8 @@ defaults:
 sidebars:
 - main_sidebar
 - doc_config_sidebar
+- doc_user_sidebar
+- doc_dev_sidebar
 
 description: "Official site of Dragom, which makes continuous integration, delivery and release engineering fast and efficient for complex multi-module enterprise systems."
 # the description is used in the feed.xml file

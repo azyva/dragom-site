@@ -81,7 +81,7 @@ entries:
       url: /doc-config-design-root-module-version.html
       output: web
 
-    - title: ExecContext (to do)
+    - title: ExecContext and workspace
       url: /doc-config-design-exec-context.html
       output: web
 

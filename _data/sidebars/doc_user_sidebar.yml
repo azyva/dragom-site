@@ -1,0 +1,27 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: Sidebar
+  levels: one
+  folders:
+
+  - title: Introduction
+    output: web
+    folderitems:
+
+    - title: Introduction
+      url: /doc-user-intro.html
+      output: web
+
+  - title: Tools
+    output: web
+    folderitems:
+
+    - title: root-manager
+      url: /doc-user-tools-root-manager.html
+      output: web
+
+    - title: setup-jenkins-jobs
+      url: /doc-user-tools-setup-jenkins-jobs.html
+      output: web
+      

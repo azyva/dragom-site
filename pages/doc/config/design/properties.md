@@ -236,8 +236,8 @@ used in most cases.
 This plugin implementation checks for the existence of the property in the
 following locations in sequence:
 
-1. [Transient data](doc-config-design-exec-context.html#transient-data) stored
-in the ExecContext
+1. [Transient data](doc-config-design-exec-context.html#transient-data)
+   stored in the ExecContext
 2. [Tool properties](#tool-properties)
 3. [ExecContext properties](#exec-context-properties)
 4. [Initialization properties](#init-properties)
